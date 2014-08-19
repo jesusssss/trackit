@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('login.loginScreen');
 });
+
+Route::post('/login', array(
+    "as" => "login",
+    "uses" => "Usersystem\\mainController@login"
+));
